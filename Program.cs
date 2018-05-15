@@ -32,16 +32,11 @@ namespace Generics
 
 			var bunchOfBananas = new List<Banana> { new Banana(), new Banana() };
 			var boxOfBananas = new Box<Banana>();
-
-			foreach(var banana in bunchOfBananas)
-			{
-				boxOfBananas.items.Add(banana);
-			}
+			var bananaCounter = new Counter<Banana>();
+			bunchOfBananas.ForEach(boxOfBananas.items.Add);
+			bunchOfBananas.ForEach(bananaCounter.Add);
 
 			Console.WriteLine(String.Format("There are {0} bunches of Bananas in the box ", boxOfBananas.items.Count));
-
-			var bananaCounter = new Counter<Banana>();
-			bunchOfBananas.ForEach(bananaCounter.Add);
 
 			Console.WriteLine(String.Format("There are {0} individual Bananas in the box ", bananaCounter.Count));
 			Console.ReadLine();
