@@ -18,7 +18,6 @@ namespace Generics
 				if (a.Color == "Red")
 				{
 					app.AddRedApples(a);
-
 				}
 			}
 			return app.RedAppleCount;
