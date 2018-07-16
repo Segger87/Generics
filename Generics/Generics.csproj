@@ -46,8 +46,8 @@
     <Compile Include="TypesOfFruits\Banana.cs" />
     <Compile Include="TypesOfContainers\Box.cs" />
     <Compile Include="TypesOfContainers\Cart.cs" />
-    <Compile Include="Counter.cs" />
-    <Compile Include="ICountable.cs" />
+    <Compile Include="Counters\Counter.cs" />
+    <Compile Include="Counters\ICountable.cs" />
     <Compile Include="..\..\..\..\..\..\Work\Training\Generics\Generics\Program.cs">
       <Link>Program.cs</Link>
     </Compile>

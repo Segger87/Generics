@@ -2,15 +2,19 @@
 
 namespace Generics
 {
-	class Box<T> : ICountable
+	public class Box<T>: ICountable where T :  ICountable
 	{
-		public List<T> items = new List<T>();
+		public List<T> boxes = new List<T>();
 
+		public void Add(T item)
+		{
+			boxes.Add(item);
+		}
 		public int Count
 		{
 			get
 			{
-				return items.Count;
+				return boxes.Count;
 			}
 		}
 	}

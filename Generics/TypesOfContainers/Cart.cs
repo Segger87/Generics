@@ -2,20 +2,25 @@
 
 namespace Generics
 {
-	class Cart<T> : ICountable
+	public class Cart<T> : Box<Box<T>> where T : ICountable
 	{
-		public List<Box<T>> _cart = new List<Box<T>>();
-		public int Count
+		private List<Cart<Box<T>>> CartList;
+
+		public Cart()
 		{
-			get
-			{
-				int _cartCount = 0;
-				foreach(var box in _cart)
-				{
-					_cartCount += box.Count;
-				}
-				return _cartCount;
-			}
+			this.CartList = new List<Cart<Box<T>>>();
 		}
+		//public int Count
+		//{
+		//	get
+		//	{
+		//		int cartCount = 0;
+		//		foreach(var box in CartList)
+		//		{
+		//			cartCount += box.Count;
+		//		}
+		//		return cartCount;
+		//	}
+		//}
 	}
 }

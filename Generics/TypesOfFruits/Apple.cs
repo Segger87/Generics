@@ -1,27 +1,26 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Generics
 {
-	class Apple : ICountable
+	public class Apple : ICountable
 	{
 		public string Color { get; }
 		public Apple(string color) => Color = color;
 
-		public static int CountRed(List<Apple> apple)
-		{
-			Counter<Apple> app = new Counter<Apple>();
+		//public static int CountRed(List<Apple> apple)
+		//{
+		//	Counter<Apple> app = new Counter<Apple>();
 
-			foreach (var a in apple)
-			{
-				if (a.Color == "Red")
-				{
-					app.AddRedApples(a);
-				}
-			}
-			return app.RedAppleCount;
-		}
+		//	foreach (var a in apple)
+		//	{
+		//		if (a.Color == "Red")
+		//		{
+		//			app.AddRedApples(a);
+		//		}
+		//	}
+		//	return app.RedAppleCount;
+		//}
 
 
 		public int Count
