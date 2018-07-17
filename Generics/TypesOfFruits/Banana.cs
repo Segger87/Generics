@@ -1,7 +1,7 @@
 ﻿
 namespace Generics
 {
-	class Banana : ICountable
+	public class Banana : ICountable
 	{
 		public int Count
 		{
